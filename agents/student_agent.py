@@ -8,9 +8,9 @@ import time
 from helpers import random_move, count_capture, execute_move, check_endgame, get_valid_moves
 
 @register_agent("student_agent")
-class StudentAgent(Agent):
+class StudentAgent(Agent): 
   """
-  A class for your implementation. Feel free to use this class to
+  A class for our implementation. Feel free to use this class to
   add any helper functionalities needed for your agent.
   """
 

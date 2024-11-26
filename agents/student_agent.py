@@ -45,5 +45,21 @@ class StudentAgent(Agent):
 
     # Dummy return (you should replace this with your actual logic)
     # Returning a random valid move as an example
-    return random_move(chess_board,player)
+    #return random_move(chess_board,player)
+    return max_move(chess_board, player)
+  
+  def max_move(chess_board, player):
+    valid_moves = get_valid_moves(chess_board,player)
+    max = 0
+    best_move = None
+    for move in valid_moves:
+      c = count_capture(chess_board, move, player)
+      if c >= max:
+        max = c
+        best_move = move
+    if best_move is None:
+      print("No more valid moves")
+    return best_move
+    
+    
 
